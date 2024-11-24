@@ -1,3 +1,3 @@
-# template
+# Weather App Project
 
-Template repo for The Odin Project lessons. Created during the "Revisiting Webpack" lesson.
+Weather App created for The Odin Project, Node.JS path.
