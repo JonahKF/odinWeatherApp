@@ -1,10 +1,67 @@
 <!doctype html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Jonah's Weather App</title>
-    </head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/156ffb70cf.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Jonah's Weather App</title>
+  </head>
 
-    <body></body>
+  <body>
+    <div class="master-container">
+      <div class="top-row">
+        <div class="welcome-text">
+          <span class="timed-greeting">Good evening,</span>
+          <span>User.</span>
+        </div>
+        <div class="city-search-form-container">
+          <form action="#">
+            <label for="city"></label>
+            <input placeholder="Kamakura, Japan" id="city" type="text" />
+            <button id="city-search"></button>
+          </form>
+        </div>
+        <div class="settings"><i class="fa-solid fa-gear"></i></div>
+      </div>
+      <div class="body-container">
+        <div class="left-child">
+          <div class="left-child-top">
+            <div class="city-name-container">
+              <div class="weather">Cloudy</div>
+              <div class="temp">12°</div>
+              <div class="weather-icon"></div>
+              <div class="city-name">Kamakura</div>
+            </div>
+          </div>
+
+          <div class="left-child-bottom">
+            <div class="forecast-container">
+              <div class="today-forecast"></div>
+              <div class="tomorrow-forecast"></div>
+              <div class="two-day-forecast"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="right-child">
+          <div class="map"></div>
+          <div class="sunrise"></div>
+          <div class="daily-graph"></div>
+          <div class="air-quality"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="credit-footer">
+      <footer>
+        <span class="credit-text">
+          Created by <a href="https://github.com/JonahKF">Jonah Kachur</a> for
+          The Odin Project.
+        </span>
+      </footer>
+    </div>
+  </body>
 </html>
