@@ -52,59 +52,30 @@ h6 {
 /* Reset End */
 
 :root {
-  --gradient-1: linear-gradient(to bottom, #020111 85%, #191621 100%);
-  --gradient-2: linear-gradient(to bottom, #020111 60%, #20202c 100%);
-  --gradient-3: linear-gradient(to bottom, #020111 10%, #3a3a52 100%);
-  --gradient-4: linear-gradient(to bottom, #20202c 0%, #515175 100%);
-  --gradient-5: linear-gradient(
+  --gradient-01: linear-gradient(to bottom, #020111 85%, #191621 100%);
+  --gradient-02: linear-gradient(to bottom, #020111 60%, #20202c 100%);
+  --gradient-03: linear-gradient(to bottom, #020111 10%, #3a3a52 100%);
+  --gradient-04: linear-gradient(to bottom, #20202c 0%, #515175 100%);
+  --gradient-05: linear-gradient(
     to bottom,
     #40405c 0%,
     #6f71aa 80%,
     #8a76ab 100%
   );
-  --gradient-6: linear-gradient(
+  --gradient-06: linear-gradient(
     to bottom,
     #4a4969 0%,
     #7072ab 50%,
     #cd82a0 100%
   );
-  --gradient-seven: linear-gradient(
+  --gradient-07: linear-gradient(
     to bottom,
     #757abf 0%,
     #8583be 60%,
     #eab0d1 100%
   );
-  --gradient-eight: linear-gradient(to bottom, #82addb 0%, #ebb2b1 100%);
-  --gradient-nine: linear-gradient(
-    to bottom,
-    #94c5f8 1%,
-    #a6e6ff 70%,
-    #b1b5ea 100%
-  );
-  --gradient-1: linear-gradient(to bottom, #020111 85%, #191621 100%);
-  --gradient-2: linear-gradient(to bottom, #020111 60%, #20202c 100%);
-  --gradient-3: linear-gradient(to bottom, #020111 10%, #3a3a52 100%);
-  --gradient-4: linear-gradient(to bottom, #20202c 0%, #515175 100%);
-  --gradient-5: linear-gradient(
-    to bottom,
-    #40405c 0%,
-    #6f71aa 80%,
-    #8a76ab 100%
-  );
-  --gradient-6: linear-gradient(
-    to bottom,
-    #4a4969 0%,
-    #7072ab 50%,
-    #cd82a0 100%
-  );
-  --gradient-7: linear-gradient(
-    to bottom,
-    #757abf 0%,
-    #8583be 60%,
-    #eab0d1 100%
-  );
-  --gradient-8: linear-gradient(to bottom, #82addb 0%, #ebb2b1 100%);
-  --gradient-9: linear-gradient(
+  --gradient-08: linear-gradient(to bottom, #82addb 0%, #ebb2b1 100%);
+  --gradient-09: linear-gradient(
     to bottom,
     #94c5f8 1%,
     #a6e6ff 70%,
@@ -164,8 +135,36 @@ h6 {
   --gradient-22: linear-gradient(to bottom, #090401 50%, #4b1d06 100%);
   --gradient-23: linear-gradient(to bottom, #00000c 80%, #150800 100%);
 
-  --temp-weather-font-color: #fef2f2;
-  --city-font-color: #fef2f2;
+  --color-01: #191621;
+  --color-02: #20202c;
+  --color-03: #3a3a52;
+  --color-04: #515175;
+  --color-05: #8a76ab;
+  --color-06: #cd82a0;
+  --color-07: #eab0d1;
+  --color-08: #ebb2b1;
+  --color-09: #b1b5ea;
+  --color-10: #94dfff;
+  --color-11: #67d1fb;
+  --color-12: #38a3d1;
+  --color-13: #246fa8;
+  --color-14: #1e528e;
+  --color-15: #5b7983;
+  --color-16: #9da671;
+  --color-17: #e9ce5d;
+  --color-18: #b26339;
+  --color-19: #2f1107;
+  --color-20: #240e03;
+  --color-21: #2f1107;
+  --color-22: #4b1d06;
+  --color-23: #150800;
+}
+
+.outfit-font {
+  font-family: "Outfit", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
 }
 
 body {
@@ -173,6 +172,21 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+
+  font-family:
+    -apple-system,
+    BlinkMacSystemFont,
+    avenir next,
+    avenir,
+    segoe ui,
+    helvetica neue,
+    helvetica,
+    Cantarell,
+    Ubuntu,
+    roboto,
+    noto,
+    arial,
+    sans-serif;
 }
 
 .master-container {
@@ -245,25 +259,20 @@ input {
   cursor: pointer;
 }
 
-.body-container {
-  display: grid;
-  grid-template-columns: 3fr 1.5fr;
-  grid-template-rows: 94vh;
-}
-
-.left-child {
-}
-
-.left-child-top {
+.child-top {
   width: 100%;
-  height: 55vh;
+  /* Adjust height to transform into homescreen */
+  height: 53vh;
 
-  background: var(--gradient-5);
+  background: var(--gradient-23);
 
-  padding-bottom: 50px;
+  padding-bottom: 118px;
+
+  position: relative;
+  border-radius: 0px;
 }
 
-.city-name-container {
+.weather-info-container {
   width: 100%;
   height: 100%;
   display: flex;
@@ -282,21 +291,66 @@ input {
   font-size: 4rem;
 }
 
-.city-name {
-  font-size: 3.3rem;
-}
-
 .weather-icon {
   aspect-ratio: 1 / 1;
   height: 100px;
   background-color: hotpink;
 }
 
-.left-child-bottom {
-  height: 41vh;
-  border-top: 1px solid white;
+.wave-container {
+  width: 100%;
+}
 
-  background-color: #383333;
+.waves {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 15vh;
+  min-height: 100px;
+  max-height: 150px;
+}
+
+.parallax > use {
+  animation: move-forever 25s cubic-bezier(0.55, 0.5, 0.45, 0.5) infinite;
+}
+.parallax > use:nth-child(1) {
+  animation-delay: -2s;
+  animation-duration: 17s;
+}
+.parallax > use:nth-child(2) {
+  animation-delay: -3s;
+  animation-duration: 18s;
+}
+.parallax > use:nth-child(3) {
+  animation-delay: -4s;
+  animation-duration: 23s;
+}
+.parallax > use:nth-child(4) {
+  animation-delay: -5s;
+  animation-duration: 35s;
+}
+@keyframes move-forever {
+  0% {
+    transform: translate3d(-90px, 0, 0);
+  }
+  100% {
+    transform: translate3d(85px, 0, 0);
+  }
+}
+
+.child-bottom {
+  height: 41vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 10px;
+
+  background-color: #white;
+}
+
+.city-name {
+  font-size: 3.3rem;
+  font-family: "Outfit";
 }
 
 .forecast-container {
@@ -310,11 +364,11 @@ input {
   background-color: #eee;
 }
 
-.right-child {
-  background-color: springgreen;
+/* .right-child {
+  background-color: #383333;
   display: flex;
   flex-direction: column;
-}
+} */
 
 .credit-footer {
   margin-top: auto;
