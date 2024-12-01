@@ -1,4 +1,5 @@
 import "./styles.css";
+import { format, parseISO } from "date-fns";
 
 const screenController = () => {
   const key = "MPY6ZZCCS2KYRC8YBYF7H9RXP"; // Pls don't :')
@@ -140,7 +141,8 @@ const screenController = () => {
       if (index === 0) {
         title.textContent = "Today";
       } else {
-        title.textContent = weatherData.days[index].datetime;
+        const dateString = weatherData.days[index].datetime;
+        title.textContent = format(parseISO(dateString), "EEEE");
       }
 
       const iconBox = card.querySelector(".icon");
