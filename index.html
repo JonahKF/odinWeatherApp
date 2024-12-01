@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/156ffb70cf.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@700&display=swap" rel="stylesheet">
+    <title>Jonah's Weather App</title>
+  <script defer src="main.js"></script></head>
+
+  <body>
+    <div class="master-container">
+      <div class="top-row">
+        <div class="welcome-text">
+          <span class="timed-greeting">Good evening,</span>
+          <span>User.</span>
+        </div>
+        <div class="city-search-form-container">
+          <form action="#" id="search-form">
+            <label for="city"></label>
+            <input placeholder="Kamakura, Japan" id="city" type="text" />
+            <button id="city-search"><i class="fa-solid fa-magnifying-glass"></i></button>
+          </form>
+        </div>
+        <div class="settings"><i class="fa-solid fa-gear"></i></div>
+      </div>
+      <div class="body-container">
+        <div class="child-top">
+          <div class="weather-info-container">
+            <div class="weather">Loading...</div>
+            <div class="temp">Loading...</div>
+            <div class="weather-icon"><i id="master-icon" class="fa-solid fa-cloud"></i></div>
+            <div class="wave-container">
+              <svg
+                class="waves"
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                viewBox="0 24 150 28"
+                preserveAspectRatio="none"
+                shape-rendering="auto"
+              >
+                <defs>
+                  <path
+                    id="gentle-wave"
+                    d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z"
+                  />
+                </defs>
+                <g class="parallax">
+                  <use
+                    xlink:href="#gentle-wave"
+                    x="48"
+                    y="0"
+                    fill="rgba(255,255,255,0.7"
+                  />
+                  <use
+                    xlink:href="#gentle-wave"
+                    x="48"
+                    y="3"
+                    fill="rgba(255,255,255,0.5)"
+                  />
+                  <use
+                    xlink:href="#gentle-wave"
+                    x="48"
+                    y="5"
+                    fill="rgba(255,255,255,0.3)"
+                  />
+                  <use xlink:href="#gentle-wave" x="48" y="7" fill="#fff" />
+                </g>
+              </svg>
+            </div>
+          </div>
+        </div>
+
+          <div class="child-bottom">
+            <div class="city-name">Please wait...</div>
+            <div class="forecast-toggle">
+                <button class="today-btn active">Today</button>
+                <button class="week-btn">Week</button>
+            </div>
+            <div class="forecast-container">
+                <div class="forecast-card">
+                    <div class="title"></div>
+                    <div class="icon"><i></i></div>
+                    <div class="rain-chance"></div>
+                </div>
+                <div class="forecast-card">
+                    <div class="title"></div>
+                    <div class="icon"><i></i></div>
+                    <div class="rain-chance"></div>
+                </div>
+                <div class="forecast-card">
+                    <div class="title"></div>
+                    <div class="icon"><i></i></div>
+                    <div class="rain-chance"></div>
+                </div>
+                <div class="forecast-card">
+                    <div class="title"></div>
+                    <div class="icon"><i></i></div>
+                    <div class="rain-chance"></div>
+                </div>
+                <div class="forecast-card">
+                    <div class="title"></div>
+                    <div class="icon"><i></i></div>
+                    <div class="rain-chance"></div>
+                </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- <div class="right-child">
+          <div class="map"></div>
+          <div class="sunrise"></div>
+          <div class="daily-graph"></div>
+          <div class="air-quality"></div>
+        </div> -->
+      </div>
+    </div>
+
+    <div class="credit-footer">
+      <footer>
+        <span class="credit-text">
+          Created by <a href="https://github.com/JonahKF">Jonah Kachur</a> for
+          The Odin Project.
+        </span>
+        <span class="credit-text">
+          <a href="https://codepen.io/goodkatz/pen/LYPGxQz">Waves</a> created by
+          Goodkatz.
+        </span>
+        <span class="credit-text">
+            Design inspired by <a href="https://www.behance.net/gallery/76315541/Weather-App-Design-Inspiration">Tatevik Anoyan</a>.
+        </span>
+      </footer>
+    </div>
+  </body>
+</html>
